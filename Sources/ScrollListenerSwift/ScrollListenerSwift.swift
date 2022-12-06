@@ -8,6 +8,19 @@
 import SwiftUI
 import Combine
 
+/// ScrollListener is a custom ScrollView, it's possible to perform an action when the user scroll
+/// and when the user finish to scroll.
+///
+/// - Parameters:
+///  - axes: The scroll view's scrollable axis. The default axis is the
+///     vertical axis.
+///  - showsIndicators: A Boolean value that indicates whether the scroll
+///     view displays the scrollable component of the content offset, in a way
+///     suitable for the platform. The default value for this parameter is
+///     `true`.
+///  - delayToPerformWhenScrollFinish: A delay to perform the action when the user finish to scroll.
+///  - content: The view builder that creates the scrollable view.
+
 public struct ScrollListener<Content: View>: View {
 
     @Environment(\.onScrollCallback) private var onScroll

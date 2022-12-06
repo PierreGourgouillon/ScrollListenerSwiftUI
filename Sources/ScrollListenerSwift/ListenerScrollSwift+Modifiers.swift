@@ -9,10 +9,13 @@ import Foundation
 import SwiftUI
 
 public extension View {
+
+    /// - Parameter perform: An action to perform when the user scroll the scrollView
     func onScroll(_ perform: @escaping (CGFloat) -> Void) -> some View {
         environment(\.onScrollCallback, perform)
     }
 
+    /// - Parameter perform: An action to perform when the user finish to scroll the ScrollView
     func onScrollFinish(_ perform: @escaping (CGFloat) -> Void) -> some View {
         environment(\.onScrollFinishCallback, perform)
     }
